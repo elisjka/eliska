@@ -99,7 +99,40 @@
       text-align: left;
       line-height: 1.5;
     }
-  
+
+    .popup-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.popup-card img {
+  transition: transform 0.3s ease;
+}
+
+.popup-card:hover img {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.popup-card .popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-card:hover .popup-content {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .moonphase {
   text-align: left;
@@ -262,11 +295,22 @@
   
   <section id="gallery">
     <h2 style="font-family: 'Times New Roman', serif;">Photo Gallery</h2>
-    <div class="gallery">
-      <img src="/eliska/images/image1.jpg" alt="Photo 1">
-      <img src="/eliska/images/image2.jpg" alt="Photo 2">
-      <img src="/eliska/images/image3.jpg" alt="Photo 3">
-      <img src="/eliska/images/image4.jpg" alt="Photo 4">
+<div class="gallery">
+  <div class="popup-card">
+    <img src="/eliska/images/image1.jpg" alt="Photo 1">
+    <div class="popup-content">
+      <p>qucaqlasan pisik</p>
+    </div>
+  </div>
+  <div class="popup-card">
+    <img src="/eliska/images/image2.jpg" alt="Photo 2">
+    <div class="popup-content">
+      <p>sevgili pisik</p>
+    </div>
+  </div>
+
+</div>
+
     </div>
   </section>
   
