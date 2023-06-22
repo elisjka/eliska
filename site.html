@@ -82,9 +82,7 @@
       grid-gap: 20px;
     }
 
-
-      .gallery img {
-      position: relative;
+    .gallery img {
       width: 100%;
       height: auto;
       border-radius: 5px;
@@ -96,39 +94,6 @@
     .gallery img:hover {
       transform: scale(1.05) rotate(-2deg);
     }
-
-    .gallery img::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      border-radius: 5px;
-    }
-
-    .gallery img:hover::before {
-      opacity: 1;
-    }
-
-    .gallery img::after {
-      content: 'View Image';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-size: 18px;
-      font-weight: bold;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .gallery img:hover::after {
-      opacity: 1;
 
     .messages {
       text-align: left;
