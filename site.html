@@ -181,7 +181,55 @@
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       animation: fadeInUp 1s ease;
     }
+   .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
 
+    .gallery .image-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery .image-card:hover {
+      transform: scale(1.05) rotate(-2deg);
+    }
+
+    .gallery .image-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .gallery .image-card .image-details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery .image-card:hover .image-details {
+      opacity: 1;
+    }
+
+    .gallery .image-card .image-details h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .gallery .image-card .image-details p {
+      margin: 0;
+      font-size: 14px;
+    }
    
     @keyframes fadeIn {
       from {
@@ -260,13 +308,37 @@
     </div>
   </section>
   
-  <section id="gallery">
+ <section id="gallery">
     <h2 style="font-family: 'Times New Roman', serif;">Photo Gallery</h2>
     <div class="gallery">
-      <img src="/eliska/images/image1.jpg" alt="Photo 1">
-      <img src="/eliska/images/image2.jpg" alt="Photo 2">
-      <img src="/eliska/images/image3.jpg" alt="Photo 3">
-      <img src="/eliska/images/image4.jpg" alt="Photo 4">
+      <div class="image-card">
+        <img src="/eliska/images/image1.jpg" alt="Photo 1">
+        <div class="image-details">
+          <h3>Title 1</h3>
+          <p>Description 1</p>
+        </div>
+      </div>
+      <div class="image-card">
+        <img src="/eliska/images/image2.jpg" alt="Photo 2">
+        <div class="image-details">
+          <h3>Title 2</h3>
+          <p>Description 2</p>
+        </div>
+      </div>
+      <div class="image-card">
+        <img src="/eliska/images/image3.jpg" alt="Photo 3">
+        <div class="image-details">
+          <h3>Title 3</h3>
+          <p>Description 3</p>
+        </div>
+      </div>
+      <div class="image-card">
+        <img src="/eliska/images/image4.jpg" alt="Photo 4">
+        <div class="image-details">
+          <h3>Title 4</h3>
+          <p>Description 4</p>
+        </div>
+      </div>
     </div>
   </section>
   
