@@ -425,17 +425,16 @@
   </footer>
 </body>
     <script>
-   ScrollReveal().reveal('.reveal', {
-        delay: 200,       
-        distance: '20px',  
-        origin: 'bottom', 
-        duration: 800,   
-        easing: 'ease-out',
-        reset: true,       
-        mobile: true,     
-        opacity: 0.3,      
-        scale: 0.9,       
-  
+      ScrollReveal().reveal('.reveal', {
+        delay: 200,        // Delay between each element's animation (in milliseconds)
+        distance: '20px',  // Distance of the reveal animation
+        origin: 'bottom',  // Origin of the animation (top, bottom, left, right)
+        duration: 800,     // Duration of the animation (in milliseconds)
+        easing: 'ease-out',// Easing function
+        reset: true,       // Resets the animation on each reveal
+        mobile: true,      // Enable animations on mobile devices
+        opacity: 1,        // Opacity effect (0: transparent, 1: opaque)
+        scale: 0.9         // Scale effect (0: small, 1: normal)
       });
     </script>
 </html>
