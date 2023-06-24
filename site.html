@@ -426,10 +426,10 @@
 </body>
     <script>
 ScrollReveal().reveal('.reveal', {
-    delay: 200,
+    delay: 100,
     distance: '20px',
     origin: 'bottom',
-    duration: 800,
+    duration: 600,
     easing: 'cubic-bezier(0.5, 0, 0, 1)',
     reset: true,
     opacity: 0,
@@ -440,10 +440,10 @@ ScrollReveal().reveal('.reveal', {
     reset: true,
     useDelay: 'always',
     beforeReveal: function (domEl) {
-      domEl.classList.add('animated', 'fadeInUp');
+      domEl.classList.add('revealed');
     },
     beforeReset: function (domEl) {
-      domEl.classList.remove('animated', 'fadeInUp');
+      domEl.classList.remove('revealed');
     }
   });
     </script>
